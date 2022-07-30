@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="description" content="WreckNoFear's Profile. An extraordinary technology enjoyer.">
+            <meta name="keywords" content="WreckNoFear, Coding, Programming">
+            <link rel="canonical" href="https://wrecknofear.github.io/">
+            <?xml version="1.0" encoding="utf-8"?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | WreckNoFear</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="global-style.css">
+        <link rel="stylesheet" href="form-style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <body>
+
+        <!-- Nav -->
+        <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/wrecknofear-logo.png" width="100px" alt="WreckNoFear logo">
+                    </a></div>
+                <ul class="menu-items">
+                    <div class="icon cancel-btn">
+                        <i class="material-symbols-outlined">close</i>
+                    </div>
+                    <li>
+                        <a href="index.html">
+                            <img class="fold-menu-logo" src="images/wrecknofear-logo.png" width="100px" alt="WreckNoFear logo">
+                        </a>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="languages.html">Languages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html#projects" class="navbar-btn">Projects</a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="material-symbols-outlined">menu</i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero hero-short">
+            <div class="hero-heading hero-short">Contact.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="panel" id="about">
+            <h2 class="panel-heading">Contact</h2>
+            <p class="panel-content">I communicate through Discord, so if you choose to contact me, it'll be through Discord. Please fill out the form below to contact me.</p>
+        </div>
+
+        <div id="submitted">
+            Form Submitted!
+            <button onclick="resetForm()">Ok</button>
+        </div>
+
+        <div id="form-wrapper">
+            <form id="contact-form" onsubmit="submitHandler(event)">
+                <label for="discord-username">What is your Discord username?</label>
+                <input type="text" id="discord-username" required autocomplete="off">
+
+                <label for="discord-tag">What is your Discord tag?</label>
+                <label discord-hash="#">
+                    <input type="text" id="discord-tag" class="indent" required pattern="[0-9]{4}" maxlength="4" autocomplete="off" placeholder="0001">
+                </label>
+
+                <label for="first-name">What is your first name?</label>
+                <input type="text" id="first-name" required autocomplete="off">
+
+                <!-- Visa selection -->
+                <p class="inline-title">Select your reason for contact:</p>
+                <group class="inline-radio">
+                    <div><input type="radio" id="reason" name="reason" value="Question" checked><label class="inline-label">Question</label></div>
+                    <div><input type="radio" id="reason" name="reason" value="Request"><label class="inline-label">Request</label></div>
+                    <div><input type="radio" id="reason" name="reason" value="Other"><label class="inline-label">Other</label></div>
+                </group>
+
+                <label for="messagen">Message:</label>
+                <input type="text" id="message" required autocomplete="off">
+
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+
+        <div class="divider"></div>
+
+        <script type="text/javascript" src="scripts.js"></script>
+        <script type="text/javascript" src="webhook-api.js"></script>
+
+    </body>
+    <footer class="footer">
+        <div class="footer-legal"><a href="https://twitter.com/wrecknofear">Website by WreckNoFear</a><br><strong>Copyright © 2022</strong></div>
+    </footer>
+
+</html>
