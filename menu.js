@@ -28,5 +28,5 @@ menuCurtain.addEventListener('click', () => {
         menuCurtain.style.display = 'none';
         menu.style.right = '-258px';
         html.style.overflow = 'visible'
-    }
+    };
 });
