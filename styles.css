@@ -1,0 +1,228 @@
+/* Main */
+html, body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+:root {
+    --grey: #01111d;
+    --cyan: #5ce1e6;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background-color: var(--grey);
+    position: relative;
+}
+a {
+    all: unset;
+}
+
+.splash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+#stars {
+    width: 100%;
+    height: 100%;
+}
+.splash-logo {
+    position: absolute;
+    height: 520px;
+    width: 520px;
+    -webkit-user-drag: none;
+    animation: splash-animation 3s linear infinite;
+}
+@keyframes splash-animation {
+    0%   { height: 520px; width: 520px; }
+    25%  { height: 540px; width: 540px; }
+    50%  { height: 570px; width: 570px; }
+    75%  { height: 540px; width: 540px; }
+    100% { height: 520px; width: 520px; }
+}
+.splash-btn-link {
+    max-width: fit-content;
+    position: absolute;
+    bottom: 15%;
+}
+.splash-btn {
+    all: unset;
+    color: #fff;
+    background-color: #000;
+    padding: 18px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.splash-btn > i {
+    color: #000;
+    background-color: #fff;
+    padding: 8px 10px;
+    margin-left: 10px;
+    border-radius: 100%;
+}
+.splash-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+.splash-btn:hover > i {
+    color: #fff;
+    background-color: #000;
+}
+
+#menu-btn > i {
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    z-index: 1;
+}
+#menu-btn > i:hover, #menu-c-btn:hover {
+    cursor: pointer;
+}
+#menu-c-btn {
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 45px;
+    font-size: 40px;
+    display: none;
+    z-index: 1;
+}
+#menu-curtain {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+#menu {
+    position: absolute;
+    background-color: var(--grey);
+    border-left: solid 8px #fff;
+    top: 0;
+    right: -258px;
+    height: 100%;
+    width: 250px;
+    transition: 0.25s ease-in-out;
+}
+.menu-list {
+    margin-top: 120px;
+    list-style: none;
+}
+.menu-list > a > li {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 40px 0;
+    border-bottom: solid 2px transparent;
+}
+.menu-list > a > li:hover {
+    border-bottom: solid 2px #fff;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.social-container {
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    font-size: 24px;
+}
+.social-container > a > i {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 100%;
+    margin: 4px;
+}
+.social-container > a > i:hover {
+    cursor: pointer;
+}
+
+#projects {
+    height: 450px;
+}
+.selector-bar {
+    text-align: center;
+    background-color: #fff;
+    max-width: 500px;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin: 40px auto;
+}
+.selector-bar > span {
+    margin: 15px;
+}
+.selector-bar > span:hover {
+    cursor: pointer;
+}
+.sb-active {
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    gap: 15px;
+    padding: 0 40px;
+    justify-content: center;
+}
+.gi {
+    background-color: #fff;
+    color: #000;
+    height: 100px;
+    width: 300px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+.gi:hover {
+    background-color: #000;
+    color: #fff;
+}
+.gi-title {
+    all: unset;
+    font-family: serif;
+    font-size: 48px;
+}
+.gi-subtitle {
+    all: unset;
+    display: block;
+}
+.download-btn {
+    color: #000;
+    padding: 12px 10px;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -22px;
+    font-size: 20px;
+}
+.gi:hover > .download-btn {
+    color: #fff;
+    transition: 0.25s ease-in-out;
+}
+
+footer {
+    background-color: #fff;
+    padding: 15px;
+}
+.footer-text {
+    text-align: center;
+    color: #000;
+}
