@@ -20,3 +20,13 @@ menuCBtn.addEventListener('click', () => {
     menu.style.right = '-258px';
     html.style.overflow = 'visible'
 });
+
+menuCurtain.addEventListener('click', () => {
+    if (menuCurtain.style.display = 'block') {
+        menuBtn.style.display = 'block';
+        menuCBtn.style.display = 'none';
+        menuCurtain.style.display = 'none';
+        menu.style.right = '-258px';
+        html.style.overflow = 'visible'
+    }
+});
