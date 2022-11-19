@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+/* Main */
+html, body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+:root {
+    --grey: #01111d;
+    --cyan: #5ce1e6;
+    --dark-cyan: #17b7bc;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background-color: var(--grey);
+    position: relative;
+}
+a {
+    all: unset;
+}
+
+/* ------------------ INDEX PAGE ------------------ */
+
+.splash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+#stars {
+    width: 200%;
+    height: 200%;
+    animation: rotate 700s linear infinite;
+}
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+}
+.splash-logo {
+    position: absolute;
+    height: 520px;
+    width: 520px;
+    -webkit-user-drag: none;
+    animation: splash-animation 3s linear infinite;
+}
+@keyframes splash-animation {
+    0%   { height: 520px; width: 520px; }
+    25%  { height: 540px; width: 540px; }
+    50%  { height: 570px; width: 570px; }
+    75%  { height: 540px; width: 540px; }
+    100% { height: 520px; width: 520px; }
+}
+.splash-btn-link {
+    max-width: fit-content;
+    position: absolute;
+    bottom: 15%;
+}
+.splash-btn {
+    all: unset;
+    color: #fff;
+    background-color: #000;
+    padding: 18px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.splash-btn > i {
+    color: #000;
+    background-color: #fff;
+    padding: 8px 10px;
+    margin-left: 10px;
+    border-radius: 100%;
+}
+.splash-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+.splash-btn:hover > i {
+    color: #fff;
+    background-color: #000;
+}
+
+#menu-btn > i {
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    z-index: 1;
+}
+#menu-btn > i:hover, #menu-c-btn:hover {
+    cursor: pointer;
+}
+#menu-c-btn {
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 45px;
+    font-size: 40px;
+    display: none;
+    z-index: 1;
+}
+#menu-curtain {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+#menu {
+    position: absolute;
+    background-color: var(--grey);
+    border-left: solid 8px #fff;
+    top: 0;
+    right: -288px;
+    height: 100%;
+    width: 280px;
+    transition: 0.25s ease-in-out;
+}
+.menu-list {
+    margin-top: 120px;
+    list-style: none;
+}
+.menu-list > a > li {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 40px 0;
+    border-bottom: solid 2px transparent;
+}
+.menu-list > a > li:hover {
+    border-bottom: solid 2px #fff;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.social-container {
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    font-size: 24px;
+    z-index: 1;
+}
+.social-container > a > i {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 100%;
+    margin: 4px;
+}
+.social-container > a > i:hover {
+    cursor: pointer;
+}
+
+#projects {
+    height: 450px;
+}
+.selector-bar {
+    text-align: center;
+    background-color: #fff;
+    max-width: 500px;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin: 40px auto;
+}
+.selector-bar > span {
+    margin: 15px;
+}
+.selector-bar > span:hover {
+    cursor: pointer;
+}
+.sb-active {
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    gap: 15px;
+    padding: 0 40px;
+    justify-content: center;
+}
+.gi {
+    background-color: #fff;
+    color: #000;
+    height: 100px;
+    width: 300px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+.gi:hover {
+    background-color: #000;
+    color: #fff;
+}
+.gi-title {
+    all: unset;
+    font-family: serif;
+    font-size: 48px;
+}
+.gi-subtitle {
+    all: unset;
+    display: block;
+}
+.download-btn {
+    color: #000;
+    padding: 12px 10px;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -22px;
+    font-size: 20px;
+}
+.gi:hover > .download-btn {
+    color: #fff;
+    transition: 0.25s ease-in-out;
+}
+
+footer {
+    background-color: #fff;
+    width: 100vw;
+    padding: 15px;
+    bottom: 0px;
+}
+.footer-text {
+    text-align: center;
+    color: #000;
+}
+
+/* ------------------ ABOUT PAGE ------------------ */
+nav {
+    background-color: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 100vw;
+}
+.nav-scroll {
+    box-shadow: 2px 2px 20px 1px #000;
+    transition: all 0.5s ease;
+
+}
+.wrecknofear-logo-nav {
+    position: absolute;
+    left: 15px;
+    z-index: 0;
+}
+.wrecknofear-logo-nav > a > img {
+    max-height: 90px;
+    max-width: 90px;
+}
+.wrecknofear-logo-nav:hover {
+    cursor: pointer;
+}
+
+.page-banner {
+    background-color: #fff;
+    box-shadow: 0 0 35px 0 #000 inset;
+    padding: 80px 10px;
+}
+.page-banner-contents {
+    margin-left: 50px;
+}
+.page-banner-contents > h2 {
+    font-size: 48px;
+    margin-bottom: 0px;
+}
+.page-banner-contents > h4 > a:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #000;
+}
+
+.content {
+    padding: 150px 80px 0;
+    color: #fff;
+}
+.c-heading {
+    color: var(--dark-cyan)
+}
+.c-paragraph {
+    font-weight: 300;
+    font-size: 18px;
+}
+.hl {
+    color: var(--dark-cyan);
+    font-weight: 400;
+}
+
+.quote {
+    margin: 100px 0;
+    text-align: center;
+    padding: 80px 0;
+    color: #fff;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.chip-container {
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+}
+.chip {
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+    padding: 20px 50px;
+    width: 100px;
+    border-radius: 5px;
+    transition: 0.25s ease-in-out;
+}
+.chip > i {
+    font-size: 48px;
+}
+.chip > h3 {
+    margin: 0;
+    margin-top: 20px;
+}
+
+.page-top {
+    color: #fff;
+    font-size: 24px;
+    position: relative;
+    left: 25px;
+    bottom: 25px;
+}
+.page-top:hover {
+    cursor: pointer;
+}
+.page-divider {
+    padding: 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.contact-btn {
+    all: unset;
+    display: block;
+    padding: 10px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    box-shadow: 5px 8px #ff00cc;
+    border-radius: 10px;
+    color: #000;
+    margin-top: 25px;
+    font-weight: 400;
+    transition: 0.25s ease-in-out;
+}
+.contact-btn i {
+    margin-left: 5px;
+}
+.contact-btn:hover {
+    box-shadow: 5px 8px var(--cyan);
+
+    color: #000;
+    cursor: pointer;
+}
