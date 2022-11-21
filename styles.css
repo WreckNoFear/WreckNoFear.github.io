@@ -12,6 +12,7 @@ html, body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 :root {
     --grey: #101010;
@@ -24,7 +25,6 @@ body::-webkit-scrollbar {
 }
 body {
     background-color: var(--grey);
-    position: relative;
 }
 a {
     all: unset;
