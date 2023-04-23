@@ -81,14 +81,14 @@ document.onkeydown = function (e) {
     } else if (e.key === "=" || e.key === "Enter") {
         if (eb.innerHTML === typedString + '=') {
             ch.style.backgroundColor = "#00ff00"
-            ch.innerHTML = "|"
+            ch.innerHTML = ""
             updateStats('correct')
             setTimeout(() => {
                 ch.style.backgroundColor = "#fff"
             }, 500);
         } else {
             ch.style.backgroundColor = "#ff0000"
-            ch.innerHTML = "|"
+            ch.innerHTML = ""
             updateStats('incorrect')
             setTimeout(() => {
                 ch.style.backgroundColor = "#fff"
