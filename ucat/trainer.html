@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?xml version="1.0" encoding="utf-8"?>
+
+    <meta name="description" content="UCAT Calculator Trainer">
+    <meta name="keywords" content="WreckNoFear, UCAT, Numpad, Trainer, TI-108">
+    <link rel="canonical" href="https://wrecknofear.github.io/">
+
+    <script src="https://kit.fontawesome.com/aa5c672c14.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <title>UCAT Calculator Trainer</title>
+</head>
+<body>
+    <div class="landing-content">
+        <h1 id="title-text">UCAT Calculator Trainer</h1>
+        <h3 id="subtitle-text">Developed for UCAT students to improve knowledge of key locations on the TI-108 calculator and standard numpad, putting finger movements into muscle memory.</h3>
+        <div id="start-btn">START</div>
+    </div>
+    <div id="nav" class="hide">
+        <ul>
+            <li id="exit-btn"><i class="fa-solid fa-chevron-left"></i> Quit & Reset</li>
+            <li class="bold-text">UCAT Calculator Trainer</li>
+            <li>Score: <span id="correct#">0</span><span class="bold-text">/</span><span id="total#">0</span></li>
+        </ul>
+    </div>
+    <section id="app-row">
+        <div class="app-column">
+            <div id="equation-bar" class="hide">|</div>
+            <div id="blurb" class="hide">
+                Identify the components of the equation above and enter each part to form the equation in the calculator. <span class="faded-text">Works with numpad, number keys, mouse and touch.</span>
+            </div>
+            <div id="mode-selector" class="hide">
+                Mode:
+                <ul>
+                    <li id="easy-btn" class="active">Easy</li>
+                    <li id="medium-btn">Medium</li>
+                    <li id="hard-btn">Hard</li>
+                    <li id="extreme-btn">Crazy</li>
+                    <li id="number-btn">Single Number</li>
+                    <li id="operator-btn">Single Operator</li>
+                </ul>
+                <i class="faded-text">(scroll horizontally to view more)</i>
+            </div>
+        </div>
+        <div class="app-column">
+            <div id="calculator-body">
+                <div class="calculator-brand">TI-108</div>
+                <div id="calculation-head"></div>
+                <div class="cal-col">
+                    <div class="cal-button red-bg r-click">+/-</div>
+                    <div class="cal-button red-bg r-click">MRC</div>
+                    <div class="cal-button w-click">7</div>
+                    <div class="cal-button w-click">4</div>
+                    <div class="cal-button w-click">1</div>
+                    <div class="cal-button red-bg r-click">ON/C</div>
+                </div>
+                <div class="cal-col">
+                    <div class="cal-button red-bg r-click">√</div>
+                    <div class="cal-button red-bg r-click">M-</div>
+                    <div class="cal-button w-click">8</div>
+                    <div class="cal-button w-click">5</div>
+                    <div class="cal-button w-click">2</div>
+                    <div class="cal-button w-click">0</div>
+                </div>
+                <div class="cal-col">
+                    <div class="cal-button red-bg r-click">%</div>
+                    <div class="cal-button red-bg r-click">M+</div>
+                    <div class="cal-button w-click">9</div>
+                    <div class="cal-button w-click">6</div>
+                    <div class="cal-button w-click">3</div>
+                    <div class="cal-button w-click">.</div>
+                </div>
+                <div class="cal-col">
+                    <div class="cal-button red-bg r-click">÷</div>
+                    <div class="cal-button red-bg r-click">×</div>
+                    <div class="cal-button red-bg r-click">-</div>
+                    <div class="cal-button red-bg r-click">+</div>
+                    <div class="cal-button red-bg r-click cal-button-double">=</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <a href="https://wrecknofear.github.io">Copyright © 2023 WreckNoFear</a>
+</footer>
+</html>
