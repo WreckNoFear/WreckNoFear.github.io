@@ -6,7 +6,7 @@ async function submitHandler(e) {
     e.preventDefault();
 
     const discordUsername = document.getElementById('discord-username').value;
-    const discordTag = document.getElementById('discord-tag').value;
+    const discordDisplayName = document.getElementById('discord-displayname').value;
     const firstName = document.getElementById('first-name').value;
     const contactReason = document.querySelector('input[name="reason"]:checked').value;
     const message = document.getElementById('message').value;
@@ -17,8 +17,9 @@ async function submitHandler(e) {
             color: 0x00ffff,
             timestamp: new Date(),
             fields: [
-                { name: '---', value: '<@387480350714232852>'},
-                { name: 'Discord User', value: discordUsername + '**' + '#' + discordTag + '**' },
+                { name: '---', value: '<@387480350714232852>' },
+                { name: 'Discord User', value: discordUsername },
+                { name: 'Discord Display Name', value: discordDisplayName }
                 { name: 'First Name', value: firstName },
                 { name: 'Contact Reason', value: contactReason },
                 { name: 'Message', value: message }
