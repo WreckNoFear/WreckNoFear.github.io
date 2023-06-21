@@ -19,7 +19,7 @@ async function submitHandler(e) {
             fields: [
                 { name: '---', value: '<@387480350714232852>' },
                 { name: 'Discord User', value: discordUsername },
-                { name: 'Discord Display Name', value: discordDisplayName }
+                { name: 'Discord Display Name', value: discordDisplayName },
                 { name: 'First Name', value: firstName },
                 { name: 'Contact Reason', value: contactReason },
                 { name: 'Message', value: message }
