@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Trip Data Entry Form</title>
+</head>
+<body>
+    <h1>Trip Data Entry Form</h1>
+
+    <form id="form" onsubmit="submitHandler(event)">
+        <div>
+            <label for="patientfirstname">Patient First Name<span>*</span></label>
+            <input name="patientfirstname" type="text" required>
+        </div>
+        <div>
+            <label for="patientsurname">Patient Surname<span>*</span></label>
+            <input name="patientsurname" type="text" required>
+        </div>
+        <div>
+            <label for="patientaddress">Patient Address<span>*</span></label>
+            <input name="patientaddress" type="text" required>
+        </div>
+        <div>
+            <label for="patientpostcode">Patient Postcode<span>*</span></label>
+            <input name="patientpostcode" type="number" required>
+        </div>
+        <div>
+            <label for="patientdob">Patient DOB<span>*</span></label>
+            <input name="patientdob" type="date" required>
+        </div>
+        <div>
+        <label for="patientgender">Patient Gender<span>*</span></label>
+            <select name="patientgender" id="patientgender" required>
+                <option disabled selected value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div>
+            <label for="driverfirstname">Driver First Name<span>*</span></label>
+            <input name="driverfirstname" type="text" required>
+        </div>
+        <div>
+            <label for="driversurname">Driver Surname<span>*</span></label>
+            <input name="driversurname" type="text" required>
+        </div>
+        <div>
+            <label for="driverlicence">Driver Licence<span>*</span></label>
+            <input name="driverlicence" type="number" required>
+        </div>
+        <div>
+            <label for="tripdate">Trip Date<span>*</span></label>
+            <input name="tripdate" type="date" required>
+        </div>
+        <div>
+            <label for="triptime">Trip Time<span>*</span></label>
+            <input name="triptime" type="number" step=".01" required>
+        </div>
+        <div>
+            <label for="carregistration">Car Registration<span>*</span></label>
+            <select name="carregistration" id="carregistration" required>
+                <option disabled selected value="">Select</option>
+                <option value="001">CAR-001</option>
+                <option value="002">CAR-002</option>
+                <option value="003">CAR-003</option>
+            </select>
+        </div>
+        <input type="submit" id="submit">
+    </form>
+
+    <div id="submitted">
+        <h1>Trip Data Submitted</h1>
+        <button id="submit-another">Submit another trip</button>
+    </div>
+
+</body>
+<footer>
+    Adam Schon <strong>|</strong> IPT Task 3
+</footer>
+</html>
